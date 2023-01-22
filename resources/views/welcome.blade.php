@@ -1,315 +1,469 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 
+<!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://hourglassbreathless.netlify.app/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
 
-    <!--====== Title ======-->
-    <title>Gueta Project</title>
-
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
-
-    <!--====== Animate CSS ======-->
-    <link rel="stylesheet" href="assets/css/animate.css">
-
-    <!--====== Slick CSS ======-->
-    <link rel="stylesheet" href="assets/css/tiny-slider.css">
-
-    <!--====== Line Icons CSS ======-->
-    <link rel="stylesheet" href="assets/fonts/lineicons/font-css/LineIcons.css">
-
-    <!--====== Tailwind CSS ======-->
-    <link rel="stylesheet" href="assets/css/tailwindcss.css">
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-    <style>
-        .clock {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateX(-50%) translateY(-50%);
-            color: rgba(116, 126, 136, var(--tw-text-opacity));
-            font-size: 30px;
-            font-family: Orbitron;
-            letter-spacing: 7px;
-            font-family: 'Nunito', sans-serif;
-        }
-    </style>
-
+    <title>Beta</title>
 </head>
 
-<>
-<!--[if IE]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please upgrade
-    your browser to improve your experience and security.</p>
-<![endif]-->
+<body>
+
+<main class="main m-0 p-0 ">
 
 
-<!--====== PRELOADER PART START ======-->
+    <div class="header row  m-0 p-0">
+        <!-- header_clock-lg-->
+        <div class="header_clock text-center d-none d-md-block col-md-4 order-md-1">
+            <div class="clock-container">
+                <div id="clock"></div>
+                <div id='date' class="date"></div>
+                <div id="dayname" class="dayname"></div>
+            </div>
+        </div>
 
-<div class="preloader">
-    <div class="loader">
-        <div class="ytp-spinner">
-            <div class="ytp-spinner-container">
-                <div class="ytp-spinner-rotator">
-                    <div class="ytp-spinner-left">
-                        <div class="ytp-spinner-circle"></div>
-                    </div>
-                    <div class="ytp-spinner-right">
-                        <div class="ytp-spinner-circle"></div>
-                    </div>
+        <!-- header_weather-lg -->
+        <div class="header_weather d-none d-md-block m-0 p-0  col-md-4  order-md-3  ">
+            <div class="container d-flex">
+                <div>
+                    <img src="/assets/images/w.jpeg" alt="" srcset="">
+                    <img src="/assets/images/w.jpeg" alt="" srcset="">
+                    <img src="/assets/images/w.jpeg" alt="" srcset="">
+
                 </div>
+                <div>WEATHER</div>
+
+            </div>
+
+
+        </div>
+
+        <!-- header_logo-lg -->
+        <div class="header_logo p-0 m-0 col-md-4 col-12  order-md-2">
+            <img src="/assets/images/logo.png" alt="">
+        </div>
+
+    </div>
+
+    <!-- carousel_lg -->
+    <div class="carousel m-0 p-0 row d-none d-md-block col-md-12">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @foreach($sliders->chunk(6) as $count => $item)
+                    <div class="carousel-item {{ $count == 0 ? 'active' : '' }}" data-bs-interval="3000">
+                        <div class="row justify-content-center">
+                            <div class="imgcontainer">
+                                @foreach($item as $event)
+                                    <div class="whole_img">
+                                        <img src="{{ URL::asset('assets/images/' . $event->image) }}"
+                                             alt="{{ $event->title }}" class="w-100">
+                                        <div class="top-img">{{$event->hour}}</div>
+                                        <div class="bottom-img">{{ Str::upper($event->title)}}
+                                            <br>{{ Str::upper($event->area)}}</div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
             </div>
         </div>
     </div>
-</div>
+    <!-- carousel_small -->
+    <div class="carousel_small m-0 p-0 d-md-none">
+        <div class="carousel_small-tittle">OUR ACTVITIES</div>
 
-<!--====== PRELOADER PART ENDS ======-->
-
-<!--====== HEADER PART START ======-->
-
-<section class="header_area">
-    <div class="navbar-area bg-white">
-        <div class="container relative">
-            <div class="row items-center">
-                <div class="w-full">
-                    <nav class="flex items-center justify-between py-4 navbar navbar-expand-lg">
-                        <a class="navbar-brand mr-5" href="index.html">
-                            <img src="assets/images/logo.png" alt="Logo">
-                        </a>
-                        <button class="block navbar-toggler focus:outline-none lg:hidden" type="button"
-                                data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="toggler-icon"></span>
-                            <span class="toggler-icon"></span>
-                            <span class="toggler-icon"></span>
-                        </button>
-
-                        <div
-                            class="absolute left-0 z-20 hidden w-full px-5 py-3 duration-300 bg-white lg:w-auto collapse navbar-collapse lg:block top-full mt-full lg:static lg:bg-transparent shadow lg:shadow-none"
-                            id="navbarOne">
-
-                            <span style="right:166%;position:relative">{{$currentDate}}</span>
-                            <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-
-                        </div> <!-- navbar collapse -->
-                    </nav> <!-- navbar -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div> <!-- header navbar -->
-</section>
-
-<!--====== HEADER PART ENDS ======-->
-
-
-<!--====== SERVICES PART START ======-->
-<!--====== SERVICES PART ENDS ======-->
-
-
-<!--====== ABOUT PART START ======-->
-<!--====== ABOUT PART ENDS ======-->
-
-<!--====== SERVICES PART START ======-->
-<!--====== SERVICES PART ENDS ======-->
-
-<!--====== WORK PART START ======-->
-
-@include("slider")
-
-<!--====== WORK PART ENDS ======-->
-
-<!--====== PRICING PLAN PART START ======-->
-
-
-<!--====== PRICING PLAN PART ENDS ======-->
-
-<!--====== TEAM PART START ======-->
-<section>
-
-
-    <!--====== TEAM PART ENDS ======-->
-
-    <!--====== BLOG PART START ======-->
-
-    <section id="blog" class="blog_area pt-120">
-
-
-        <div class="container-fluid">
-
-
-            <div class="row justify-center lg:justify-start">
-
-
-                <div class="w-full md:w-8/12 lg:w-6/12 xl:w-3/12">
-                    <div
-                        class="single_blog mx-3 mt-8 rounded-xl bg-white transition-all duration-300 overflow-hidden hover:shadow-lg team_active">
-                        <div class="bxslider  blog_content p-4 md:p-5">
-                            <div>
-                                <div class="blog_image">
-                                    <img src="assets/images/blog-1.jpg" alt="blog" class="w-full">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @foreach($sliders->chunk(2) as $count => $item)
+                    <div class="carousel-item @if($loop->first) {{ 'active' }} @endif" data-bs-interval="3000">
+                        <div class="carousel_small-container">
+                            @foreach($item as $event)
+                                <div class="carousel_small-image">
+                                    <img src="{{ URL::asset('assets/images/' . $event->image) }}" class="d-block w-100"
+                                         alt="{{ $event->title }}">
+                                    <div class="top-img1">{{$event->hour}}</div>
+                                    <div class="bottom-img1">{{ Str::upper($event->title)}}
+                                        <br>{{ Str::upper($event->area)}}</div>
                                 </div>
-                                <div class="blog_content p-4 md:p-5">
-                                    <ul class="blog_meta flex justify-between">
-                                        <li class="text-body-color text-sm md:text-base">By: <a href="#"
-                                                                                                class="text-body-color hover:text-theme-color">Musharof
-                                                Chowdury</a></li>
-                                        <li class="text-body-color text-sm md:text-base">15 June 2024</li>
-                                    </ul>
-                                    <h3 class="blog_title"><a href="#">How to track your business revenue</a></h3>
+                            @endforeach
+                        </div>
+                    </div>
+                @endforeach
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer_inner-container  row m-0 p-0">
+
+        <!-- dinning_lg        -->
+        <div class="footer_dinnig-container d-none d-md-block m-0 p-0  col-md-4">
+            <div class="footer_dinning-tittle col-12 ">DINNING RESTAURANTS</div>
+            <div class="footer_dinnig-inner col-md-12">
+
+                @foreach($foods as $item)
+                    @if($item->section==="dinning")
+                        <div class="restaurant_container">
+                            <div class="restaurant_name">{{$item->reaturant_name}}</div>
+
+                            <div class="restaurants_inner col-12">
+                                <img src="{{ URL::asset('assets/images/' . $item->logo) }}" alt=""/>
+                                <div class="logo_info-container ">
+                                    <div class="logo-info">
+                                        <img src="assets/images/Buffet.svg" alt=""/>
+                                        <div class="type">{{$item->type_food}}</div>
+                                    </div>
+
+                                    <div class="logo-info">
+                                        <img src="assets/images/Menu.svg" alt=""/>
+                                        <div class="type">{{$item->carte_name}}</div>
+                                    </div>
+                                    <div class="logo-info">
+                                        <img src="assets/images/Clock.svg" alt=""/>
+                                        <div class="type">{{$item->schedule}}</div>
+                                    </div>
+                                    <div class="logo-info">
+                                        <img src="assets/images/Members.svg" alt=""/>
+                                        <div class="type">{{$item->type_food}}members</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <div class="blog_image">
-                                    <img src="assets/images/blog-2.jpg" alt="blog" class="w-full">
-                                </div>
-                                <div class="blog_content p-4 md:p-5">
-                                    <ul class="blog_meta flex justify-between">
-                                        <li class="text-body-color text-sm md:text-base">By: <a href="#"
-                                                                                                class="text-body-color hover:text-theme-color">Musharof
-                                                Chowdury</a></li>
-                                        <li class="text-body-color text-sm md:text-base">15 June 2024</li>
-                                    </ul>
-                                    <h3 class="blog_title"><a href="#">How to track your business revenue</a></h3>
+                        </div>
+                    @endif
+                @endforeach
+            </div>
+        </div>
+
+
+        <!-- dinnig_small -->
+        <div class="dinnig_small m-0 p-0 d-md-none">
+
+            <div class="footer_dinning-tittle2 m-0 p-0 col-12 ">DINNING RESTAURANTS</div>
+
+            @foreach($foods as $item)
+                @if($item->section==="dinning")
+                    <div class="footer_dinnig-inner2 ">
+                        <div class="restaurant_container2">
+                            <div class="restaurant_name2">{{$item->restaurant_name}}</div>
+                            <div class="restaurants_inner2 col-12">
+                                <img src="{{ URL::asset('assets/images/' . $item->logo) }}"
+                                     alt="{{$item->restaurant_name}}"/>
+                                <div class="logo_info-container2 ">
+                                    <div class="logo-info2">
+                                        <img src="assets/images/Buffet.svg" alt=""/>
+                                        <div class="type">{{$item->type_food}}</div>
+                                    </div>
+
+                                    <div class="logo-info2">
+                                        <img src="assets/images/Menu.svg" alt=""/>
+                                        <div class="type">{{$item->carte_name}}</div>
+                                    </div>
+                                    <div class="logo-info2">
+                                        <img src="assets/images/Clock.svg" alt=""/>
+                                        <div class="type">{{$item->schedule}}</div>
+                                    </div>
+                                    <div class="logo-info2">
+                                        <img src="assets/images/Members.svg" alt=""/>
+                                        <div class="type">{{$item->members}}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                @endif
+            @endforeach
+
+        </div>
+
+        <!-- footer_breakfast-lg -->
+        <div class="footer_breakfast-container d-none d-md-block m-0 p-0  col-md-2">
+            <div class="footer_breakfast-tittle ">BREAKFAST & LUNCH</div>
+            <div class="footer_breakfast-inner ">
+
+                @foreach($foods as $item)
+                    @if($item->section==="breakfast")
+                        <div class="restaurant_container-bf">
+
+                            <div class="restaurant_name">{{$item->restaurant_name}}</div>
+
+                            <div class="restaurants_inner col-12">
+                                <img src="{{ URL::asset('assets/images/' . $item->logo) }}"
+                                     alt="{{$item->restaurant_name}}"/>
+                                <div class="logo_info-container ">
+                                    <div class="logo-info">
+                                        <img src="assets/images/Buffet.svg" alt=""/>
+                                        <div class="type">{{$item->type_food}}</div>
+                                    </div>
+
+                                    <div class="logo-info">
+                                        <img src="assets/images/Menu.svg" alt=""/>
+                                        <div class="type">{{$item->carte_name}}</div>
+                                    </div>
+                                    <div class="logo-info">
+                                        <img src="assets/images/Clock.svg" alt=""/>
+                                        <div class="type">{{$item->schedule}}</div>
+                                    </div>
+                                    <div class="logo-info">
+                                        <img src="assets/images/Members.svg" alt=""/>
+                                        <div class="type">{{$item->members}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
+            </div>
+        </div>
+
+        <!--breakfast_small-->
+
+        <div class="breakfast_small m-0 p-0 d-md-none">
+
+            <div class="footer_dinning-tittle2 m-0 p-0 col-12 ">BREAKFAST & LUNCH</div>
+
+            @foreach($foods as $item)
+                @if($item->section==="breakfast")
+                    <div class="footer_dinnig-inner2 ">
+                        <div class="restaurant_container2">
+                            <div class="restaurant_name2">{{$item->restaurant_name}}</div>
+
+                            <div class="restaurants_inner2 col-12">
+                                <img src="{{ URL::asset('assets/images/' . $item->logo) }}"
+                                     alt="{{$item->restaurant_name}}"/>
+                                <div class="logo_info-container2 ">
+                                    <div class="logo-info2">
+                                        <img src="assets/images/Buffet.svg" alt=""/>
+                                        <div class="type">{{$item->type_food}}</div>
+                                    </div>
+
+                                    <div class="logo-info2">
+                                        <img src="assets/images/Menu.svg" alt=""/>
+                                        <div class="type">{{$item->carte_name}}</div>
+                                    </div>
+                                    <div class="logo-info2">
+                                        <img src="assets/images/Clock.svg" alt=""/>
+                                        <div class="type">{{$item->schedule}}</div>
+                                    </div>
+                                    <div class="logo-info2">
+                                        <img src="assets/images/Members.svg" alt=""/>
+                                        <div class="type">{{$item->members}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
+        </div>
+
+        <!-- footer_barsQr-lg -->
+        <div class="footer_barsQr-container  d-none d-md-block  m-0 p-0  col-md-2">
+            <div class="footer_barsQr-tittle col-12 ">OUR BARS</div>
+            <div class="footer_barsQr-inner ">
+                <div class="bars_container ">
+
+                    @foreach($foods as $item)
+                        @if($item->section==="ourbars")
+                            <div class="bars">
+                                <div class="logo-time">
+                                    <div class="bar_name">{{$item->restaurant_name}}</div>
+                                    <div class="time-bar">{{$item->schedule}}</div>
+                                </div>
+                                <img src="{{ URL::asset('assets/images/' . $item->logo) }}" alt="">
+                            </div>
+                        @endif
+                    @endforeach
+
                 </div>
 
-                <div class="w-full md:w-8/12 lg:w-6/12 xl:w-3/12">
-                    <div
-                        class="single_blog mx-3 mt-8 rounded-xl bg-white transition-all duration-300 overflow-hidden hover:shadow-lg">
-                        <div class="blog_image">
-                            <img src="assets/images/blog-1.jpg" alt="blog" class="w-full">
+                <div class="qr_container">
+                    <div class="qr-inner">
+                        <div class="qr">QR</div>
+                        <div class="vector_qr">
+                            <img src="/assets/images/VECTORQRBRCSL.png" alt="">
+                            <div class="scan_me">SCAN ME</div>
                         </div>
-                        <div class="blog_content p-4 md:p-5">
-                            <ul class="blog_meta flex justify-between">
-                                <li class="text-body-color text-sm md:text-base">By: <a href="#"
-                                                                                        class="text-body-color hover:text-theme-color">Musharof
-                                        Chowdury</a></li>
-                                <li class="text-body-color text-sm md:text-base">15 June 2024</li>
-                            </ul>
-                            <h3 class="blog_title"><a href="#">How to track your business revenue</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--barsQr_small-->
+        <div class="barsQr_small m-0 p-0 d-md-none">
+
+            <div class="footer_barsQr-tittle0 m-0 p-0 col-12 ">OUR BARS</div>
+            <div class="footer_barsQr-inner0 ">
+                <div class="bars_container0 ">
+
+                    @foreach($foods as $item)
+                        @if($item->section==="ourbars")
+                            <div class="bars0">
+                                <div class="bar_name0">{{$item->restaurant_name}}</div>
+                                <div class="logo-time0">
+                                    <div class="logo-bar0">
+                                        <img src="{{ URL::asset('assets/images/' . $item->logo) }}"
+                                             alt="{{$item->restaurant_name}}">
+                                    </div>
+                                    <div class="time-bar0">{{$item->schedule}}</div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+
+                </div>
+                <div class="qr_container0">
+                    <div class="qr0">QR</div>
+                    <div class="qr-inner0">
+
+                        <div class="vector_qr0">
+                            <img src="/assets/images/VECTORQRBRCSL.png" alt="">
+                            <div class="scan_me0">SCAN ME</div>
                         </div>
-                    </div> <!-- row -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- flyer_lg -->
+        <div class="footer_flyer-container d-none d-md-block m-0 p-0 order-sm-4 col-md-2">
+            <div class="footer_flyer-tittle ">FLYER</div>
+            <div class="flyer-inner">
+
+                <div class="flyer ">
+                    <img src="/assets/images/strong.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- flyer_small -->
+
+        <div class="flyer_small d-md-none m-0 p-0">
+
+            <div class="footer_flyer-container1  m-0 p-0 order-sm-4 col-md-2">
+                <div class="footer_flyer-tittle1 ">FLYER</div>
+                <div class="carousel-item-flyer">
+
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item  active" data-bs-interval="6000">
+                                <div class="staff_small-container">
+                                    <div class="staff-image">
+                                        <img src="assets/images/strong.png" class="d-block w-100" alt="...">
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-item" data-bs-interval="6000">
+                                <div class="staff_small-container">
+                                    <div class="staff-image">
+                                        <img src="images/Flyers/fireshow.png" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="6000">
+                                <div class="staff_small-container">
+                                    <div class="staff-image">
+                                        <img src="images/Flyers/jazznight.png" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-item" data-bs-interval="6000">
+                                <div class="staff_small-container">
+                                    <div class="staff-image">
+                                        <img src="images/Flyers/neonparty.png" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
-                <div class="w-full md:w-8/12 lg:w-6/12 xl:w-3/12">
-                    <div
-                        class="single_blog mx-3 mt-8 rounded-xl bg-white transition-all duration-300 overflow-hidden hover:shadow-lg">
-                        <div class="blog_image">
-                            <img src="assets/images/blog-2.jpg" alt="blog" class="w-full">
+            </div>
+        </div>
+
+        <!-- footer_staff-lg -->
+        <div class="footer_staff-container d-none d-md-block m-0 p-0 order-md-first col-md-2">
+            <div class="footer_staff-tittle  ">E-TEAM</div>
+
+            <div id="carouselExampleInterval m-0 p-0" class="carousel1 slide1" data-bs-ride="carousel">
+                <div class="carousel-inner m-0 p-0">
+                    @foreach ($slidersEmp as $count => $SliderEmp)
+                        <div class="carousel-item {{ $count == 0 ? 'active' : '' }}" data-bs-interval="4000">
+                            <div class="staff_lg-container">
+                                <div class="staff_lg-image">
+                                    <img src="{{ URL::asset('assets/images/' . $SliderEmp->image) }}"
+                                         alt="{{ $SliderEmp->title }}" class="d-block w-100">
+                                    <div class="staff_lg-bottom-img">{{ $SliderEmp->title }}</div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="blog_content p-4 md:p-5">
-                            <ul class="blog_meta flex justify-between">
-                                <li class="text-body-color text-sm md:text-base">By: <a href="#"
-                                                                                        class="text-body-color hover:text-theme-color">Musharof
-                                        Chowdury</a></li>
-                                <li class="text-body-color text-sm md:text-base">15 June 2024</li>
-                            </ul>
-                            <h3 class="blog_title"><a href="#">Improving products depending on feedback</a></h3>
-                        </div>
-                    </div> <!-- row -->
-                </div>
-                <div class="w-full md:w-8/12 lg:w-6/12 xl:w-3/12">
-                    <div
-                        class="single_blog mx-3 mt-8 rounded-xl bg-white transition-all duration-300 overflow-hidden hover:shadow-lg">
-                        <div class="blog_image">
-                            <img src="assets/images/blog-3.jpg" alt="blog" class="w-full">
-                        </div>
-                        <div class="blog_content p-4 md:p-5">
-                            <ul class="blog_meta flex justify-between">
-                                <li class="text-body-color text-sm md:text-base">By: <a href="#"
-                                                                                        class="text-body-color hover:text-theme-color">Musharof
-                                        Chowdury</a></li>
-                                <li class="text-body-color text-sm md:text-base">15 June 2024</li>
-                            </ul>
-                            <h3 class="blog_title"><a href="#">How to diversify your audience</a></h3>
-                        </div>
-                    </div> <!-- row -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-</section>
-
-<!--====== BLOG PART ENDS ======-->
-
-
-<!--====== BACK TOP TOP PART START ======-->
-
-<a href="#" class="scroll-top"><i class="lni lni-chevron-up"></i></a>
-
-<!--====== BACK TOP TOP PART ENDS ======-->
-
-<!--====== PART START ======-->
-
-<!--
-    <section class="">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-">
+                    @endforeach
 
                 </div>
             </div>
         </div>
-    </section>
--->
-
-<!--====== PART ENDS ======-->
 
 
-<!--====== Tiny Slider js ======-->
-<script src="assets/js/tiny-slider.js"></script>
+        <!-- footer_staff-small -->
 
-<!--====== Wow js ======-->
-<script src="assets/js/wow.min.js"></script>
+        <div class="footer_staff-small d-md-none m-0 p-0">
+            <div class="staff_small-tittle  ">E-TEAM</div>
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
 
-<!--====== Main js ======-->
-<script src="assets/js/main.js"></script>
+                    @foreach ($slidersEmp as $count => $SliderEmp)
+                        <div class="carousel-item {{ $count == 0 ? 'active' : '' }}" data-bs-interval="6000">
+                            <div class="staff_small-container">
+                                <div class="staff-image">
+                                    <img src="{{ URL::asset('assets/images/' . $SliderEmp->image) }}"
+                                         class="d-block w-100" alt="{{ $SliderEmp->title }}">
+                                    <div class="staff_bottom-img">{{ $SliderEmp->title }}</div>
+                                </div>
 
-<script>
-    function showTime() {
-        var date = new Date();
-        var h = date.getHours(); // 0 - 23
-        var m = date.getMinutes(); // 0 - 59
-        var s = date.getSeconds(); // 0 - 59
-        var session = "AM";
+                            </div>
+                        </div>
+                    @endforeach
 
-        if (h == 0) {
-            h = 12;
-        }
+                </div>
+            </div>
+        </div>
+        </section>
+</main>
 
-        if (h > 12) {
-            h = h - 12;
-            session = "PM";
-        }
 
-        h = (h < 10) ? "0" + h : h;
-        m = (m < 10) ? "0" + m : m;
-        s = (s < 10) ? "0" + s : s;
+<script src="/assets/js/clock.js"></script>
+<script src="/assets/js/weather.js"></script>
 
-        var time = h + ":" + m + ":" + s + " " + session;
-        document.getElementById("MyClockDisplay").innerText = time;
-        document.getElementById("MyClockDisplay").textContent = time;
 
-        setTimeout(showTime, 1000);
-
-    }
-
-    showTime();
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+</script>
 </body>
 
 </html>
