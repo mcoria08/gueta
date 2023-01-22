@@ -18,15 +18,6 @@
                     <x-nav-link :href="route('admindinning')" :active="request()->routeIs('admindinning')">
                         {{ __('Dinning') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('adminbreakfast')" :active="request()->routeIs('adminbreakfast')">
-                        {{ __('Breakfast') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('adminourbars')" :active="request()->routeIs('adminourbars')">
-                        {{ __('Our Bars') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('adminflyer')" :active="request()->routeIs('adminflyer')">
-                        {{ __('Flyer') }}
-                    </x-nav-link>
 
                 </div>
             </div>
