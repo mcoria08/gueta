@@ -24,13 +24,13 @@ Route::get('/', function () {
     $currentDate = $date->format('l, jS F Y');
 
     //Get Sliders
-    $sliders = Slider::where('active', '=', 1)->where('main_section', '=', 'mainsection')->get();
+    $sliders = Slider::where('main_section', '=', 'mainsection')->get();
 
     //Get Food
-    $foods = FoodSchedule::where('active', '=', 1)->get();
+    $foods = FoodSchedule::get();
 
     //Get Employees
-    $slidersEmp = Slider::where('active', '=', 1)->where('main_section', '=', 'employeesection')->get();
+    $slidersEmp = Slider::where('main_section', '=', 'employeesection')->get();
     return view('welcome', compact('currentDate', 'sliders', 'slidersEmp', 'foods'));
 });
 
