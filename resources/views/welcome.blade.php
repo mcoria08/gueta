@@ -449,7 +449,7 @@
                                 <div class="staff-image">
                                     <img src="{{ URL::asset('assets/images/' . $SliderEmp->image) }}"
                                          class="d-block w-100" alt="{{ $SliderEmp->title }}">
-                                    <div class="bottom-img">{{ $SliderEmp->title }}</div>
+                                    <div class="bottom-img">{{ $SliderEmp->area }} <br/> {{ $SliderEmp->title }}</div>
                                 </div>
 
                             </div>
