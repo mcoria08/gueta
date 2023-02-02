@@ -13,6 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
 
+    <style>
+        @media (min-width: 700px) {
+            .bottom-img {
+                font-size: 7.3vw
+            }
+        }
+    </style>
+
+
     <title>Beta</title>
 </head>
 
