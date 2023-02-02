@@ -63,12 +63,12 @@ class SliderController extends Controller
         $validatedData = $request->validate([
             'titleEdit' => 'required|min:3',
             'areaEdit' => 'required|min:3',
-            'hourEdit' => 'required|min:3',
+            //'hourEdit' => 'required|min:3',
             //'image' => 'required',
         ], [
             'titleEdit.required' => 'Title field is required.',
             'areaEdit.required' => 'Area field is required.',
-            'hourEdit.required' => 'Hour field is required.',
+            //'hourEdit.required' => 'Hour field is required.',
             //'image.required' => 'Images file is required.',
         ]);
 
