@@ -355,7 +355,6 @@
             <div class="footer_flyer-container d-none d-md-block m-0 p-0 order-sm-4 col-md-2">
                 <div class="footer_flyer-tittle ">FLYER</div>
                 <div class="flyer-inner">
-
                     <div id="carouselExampleInterval m-0 p-0" class="carousel1 slide1" data-bs-ride="carousel">
                         <div class="carousel-inner m-0 p-0">
                             @foreach ($slidersEmp as $count => $SliderEmp)
