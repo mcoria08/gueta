@@ -406,59 +406,6 @@
 
             <!-- flyer_small -->
 
-            <div class="flyer_small d-md-none m-0 p-0">
-
-                <div class="footer_flyer-container1  m-0 p-0 order-sm-4 col-md-2">
-                    <div class="footer_flyer-tittle1 ">FLYER</div>
-                    <div class="carousel-item-flyer">
-
-                        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-
-                                <div class="carousel-item  active" data-bs-interval="6000">
-                                    <div class="staff_small-container">
-                                        <div class="staff-image">
-                                            <img src="assets/images/strong.png" class="d-block w-100" alt="...">
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                                <div class="carousel-item" data-bs-interval="6000">
-                                    <div class="staff_small-container">
-                                        <div class="staff-image">
-                                            <img src="images/Flyers/fireshow.png" class="d-block w-100"
-                                                alt="...">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item" data-bs-interval="6000">
-                                    <div class="staff_small-container">
-                                        <div class="staff-image">
-                                            <img src="images/Flyers/jazznight.png" class="d-block w-100"
-                                                alt="...">
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="carousel-item" data-bs-interval="6000">
-                                    <div class="staff_small-container">
-                                        <div class="staff-image">
-                                            <img src="images/Flyers/neonparty.png" class="d-block w-100"
-                                                alt="...">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
 
             <!-- footer_staff-lg -->
             <div class="footer_staff-container d-none d-md-block m-0 p-0 order-md-first col-md-2">
