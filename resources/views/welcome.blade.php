@@ -363,6 +363,9 @@
                                         <div class="staff_lg-image">
                                             <img src="{{ URL::asset('assets/images/' . $SliderEmp->image) }}"
                                                 alt="{{ $SliderEmp->title }}" class="d-block w-100">
+                                            <div class="bottom-img" style="right:0 !important">
+                                                {{ $SliderEmp->title }}
+                                            </div>
                                         </div>
 
                                     </div>
