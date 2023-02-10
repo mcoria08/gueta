@@ -31,7 +31,10 @@ Route::get('/', function () {
 
     //Get Employees
     $slidersEmp = Slider::where('active', '=', 1)->where('main_section', '=', 'employeesection')->get();
-    return view('welcome', compact('currentDate', 'sliders', 'slidersEmp', 'foods'));
+
+    //Get Flyer's
+    $slidersFlyer = Slider::where('active', '=', 1)->where('main_section', '=', 'flyersection')->get();
+    return view('welcome', compact('currentDate', 'sliders', 'slidersEmp', 'foods', 'slidersFlyer'));
 });
 
 Route::get('/dashboard', [SliderController::class, 'getSliders'])->middleware(['auth'])->name('dashboard');

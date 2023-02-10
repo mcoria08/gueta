@@ -357,7 +357,7 @@
                 <div class="flyer-inner">
                     <div id="carouselExampleInterval m-0 p-0" class="carousel1 slide1" data-bs-ride="carousel">
                         <div class="carousel-inner m-0 p-0">
-                            @foreach ($slidersEmp as $count => $SliderEmp)
+                            @foreach ($slidersFlyer as $count => $SliderEmp)
                                 <div class="carousel-item {{ $count == 0 ? 'active' : '' }}" data-bs-interval="4000">
                                     <div class="staff_lg-container">
                                         <div class="staff_lg-image">
@@ -383,7 +383,7 @@
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
 
-                            @foreach ($slidersEmp as $count => $SliderEmp)
+                            @foreach ($slidersFlyer as $count => $SliderEmp)
                                 <div class="carousel-item {{ $count == 0 ? 'active' : '' }}" data-bs-interval="6000">
                                     <div class="staff_small-container">
                                         <div class="staff-image">
