@@ -378,25 +378,28 @@
                 </div>
             </div>
 
-            <div class="footer_staff-small d-md-none m-0 p-0">
-                <div class="staff_small-tittle  ">FLYER</div>
-                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+            <div class="flyer_small d-md-none m-0 p-0">
+                <div class="footer_staff-small d-md-none m-0 p-0">
+                    <div class="staff_small-tittle  ">FLYER</div>
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
 
-                        @foreach ($slidersEmp as $count => $SliderEmp)
-                            <div class="carousel-item {{ $count == 0 ? 'active' : '' }}" data-bs-interval="6000">
-                                <div class="staff_small-container">
-                                    <div class="staff-image">
-                                        <img src="{{ URL::asset('assets/images/' . $SliderEmp->image) }}"
-                                            class="d-block w-100" alt="{{ $SliderEmp->title }}">
-                                        <div class="bottom-img">{{ $SliderEmp->area }} <br /> {{ $SliderEmp->title }}
+                            @foreach ($slidersEmp as $count => $SliderEmp)
+                                <div class="carousel-item {{ $count == 0 ? 'active' : '' }}" data-bs-interval="6000">
+                                    <div class="staff_small-container">
+                                        <div class="staff-image">
+                                            <img src="{{ URL::asset('assets/images/' . $SliderEmp->image) }}"
+                                                class="d-block w-100" alt="{{ $SliderEmp->title }}">
+                                            <div class="bottom-img">{{ $SliderEmp->area }} <br />
+                                                {{ $SliderEmp->title }}
+                                            </div>
                                         </div>
+
                                     </div>
-
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
 
+                        </div>
                     </div>
                 </div>
             </div>
