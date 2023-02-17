@@ -11,18 +11,18 @@ on:
 
 jobs:
   build:
-    web-deploy:
-      name: 🎉 Create deployment artifact
-      runs-on: ubuntu-latest
-      steps:
-        - name: 🚚 Get latest code
-          uses: actions/checkout@v3
-          with:
-            repo-token: ${{ secrets.gueta-token }}
-        - name: 📂 Deploy
-          run: |
-            git config user.email "mcoria08@gmail.com"
-            git config user.name "mcoria08"
-            git add --all
-            git commit -m "Updating Project" || echo "No changes to commit"
-            git push
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+        with:
+          repo-token: ${{ secrets.GUETA_TOKEN }}
+      - name: 📂 Deploy
+        run: |
+          git config user.email "mcoria08@gmail.com"
+          git config user.name "mcoria08"
+          git add --all
+          git commit -m "Updating Project" || echo "No changes to commit"
+      - name: 🎉 Push the updated branch
+        run: |
+          git push
