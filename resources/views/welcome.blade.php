@@ -45,7 +45,9 @@
         <div class="header_weather d-none d-md-block m-0 p-0  col-md-4  order-md-3  ">
             <div class="container d-flex">
                 <div>
-                    
+                    <img src="/assets/images/w.jpeg" alt="" srcset="">
+                    <img src="/assets/images/w.jpeg" alt="" srcset="">
+                    <img src="/assets/images/w.jpeg" alt="" srcset="">
                 </div>
                 <div>WEATHER</div>
 

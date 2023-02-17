@@ -18,7 +18,7 @@ jobs:
         - name: 📂 Sync files
           uses: SamKirkland/FTP-Deploy-Action@4.3.3
           with:
-            server: gueta@gueta.pixelesweb.com
+            server: ftp.pixelesweb.com
             username: ${{ secrets.ftp_username }}
             password: ${{ secrets.ftp_password }}
             server-dir: /public_html/gueta/
