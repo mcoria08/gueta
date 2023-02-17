@@ -45,12 +45,45 @@
         <div class="header_weather d-none d-md-block m-0 p-0  col-md-4  order-md-3  ">
             <div class="container d-flex">
                 <div>
-                    <div id="ww_7abc11045ae01" v='1.3' loc='id'
-                         a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":["wl6064"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_whr":3}'>
-                        Weather for the Following Location: <a href="https://2ua.org/mex/cabo_san_lucas/map/"
-                                                               id="ww_7abc11045ae01_u" target="_blank">Cabo San Lucas
-                            map, Mexico</a></div>
-                    <script async src="https://app1.weatherwidget.org/js/?id=ww_7abc11045ae01"></script>
+                    <script>
+                        (function (d, s, id) {
+                            if (d.getElementById(id)) {
+                                if (window.__TOMORROW__) {
+                                    window.__TOMORROW__.renderWidget();
+                                }
+                                return;
+                            }
+                            const fjs = d.getElementsByTagName(s)[0];
+                            const js = d.createElement(s);
+                            js.id = id;
+                            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+                            fjs.parentNode.insertBefore(js, fjs);
+                        })(document, 'script', 'tomorrow-sdk');
+                    </script>
+
+                    <div class="tomorrow"
+                         data-location-id="071781"
+                         data-language="EN"
+                         data-unit-system="METRIC"
+                         data-skin="dark"
+                         data-widget-type="summary"
+                         style="padding-bottom:22px;position:relative;"
+                    >
+                        <a
+                            href="https://www.tomorrow.io/weather-api/"
+                            rel="nofollow noopener noreferrer"
+                            target="_blank"
+                            style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"
+                        >
+                            <img
+                                alt="Powered by the Tomorrow.io Weather API"
+                                src="https://weather-website-client.tomorrow.io/img/powered-by.svg"
+                                width="250"
+                                height="18"
+                            />
+                        </a>
+                    </div>
                 </div>
             </div>
 
