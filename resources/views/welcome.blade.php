@@ -45,20 +45,11 @@
         <div class="header_weather d-none d-md-block m-0 p-0  col-md-4  order-md-3  ">
             <div class="container d-flex">
                 <div>
-                    <a class="weatherwidget-io" href="https://forecast7.com/en/22d89n109d92/cabo-san-lucas/"
-                       data-label_1="LOS CABOS" data-label_2="WEATHER" data-days="3" data-theme="original">LOS CABOS
-                        WEATHER</a>
-                    <script>
-                        !function (d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0];
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = 'https://weatherwidget.io/js/widget.min.js';
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, 'script', 'weatherwidget-io-js');
-                    </script>
+                    <div id="ww_7abc11045ae01" v='1.3' loc='id'
+                         a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+                        Weather Data Source: <a href="https://sharpweather.com/weather_paris/today/"
+                                                id="ww_7abc11045ae01_u" target="_blank">weather today Paris</a></div>
+                    <script async src="https://app1.weatherwidget.org/js/?id=ww_7abc11045ae01"></script>
                 </div>
             </div>
 
