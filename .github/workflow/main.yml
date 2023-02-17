@@ -19,8 +19,8 @@ jobs:
           repo-token: ${{ secrets.GUETA_TOKEN }}
       - name: 📂 Deploy
         run: |
-          git config user.email "mcoria08@gmail.com"
-          git config user.name "mcoria08"
+          git config user.email ${{ secrets.SECRET_GUETA_EMAIL }}
+          git config user.name ${{ secrets.SECRET_GUETA_USERNAME_REPO }}
           git add --all
           git commit -m "Updating Project" || echo "No changes to commit"
       - name: 🎉 Push the updated branch
