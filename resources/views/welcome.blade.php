@@ -52,7 +52,6 @@
                             map, Mexico</a></div>
                     <script async src="https://app1.weatherwidget.org/js/?id=ww_7abc11045ae01"></script>
                 </div>
-                <div>WEATHER</div>
             </div>
 
 
