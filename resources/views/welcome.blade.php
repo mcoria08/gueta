@@ -359,7 +359,8 @@
                                         <img src="{{ URL::asset('assets/images/' . $SliderEmp->image) }}"
                                              alt="{{ $SliderEmp->title }}" class="d-block w-100">
                                         <div class="bottom-img" style="right:0 !important">
-                                            {{ $SliderEmp->title }}
+                                            {{ $SliderEmp->title }}<br/>
+                                            {{ $SliderEmp->area }}
                                         </div>
                                     </div>
 
@@ -384,7 +385,11 @@
                                     <div class="staff-image">
                                         <img src="{{ URL::asset('assets/images/' . $SliderEmp->image) }}"
                                              class="d-block w-100" alt="{{ $SliderEmp->title }}">
-
+                                        <br/>
+                                        <div class="bottom-img" style="right:0 !important">
+                                            {{ $SliderEmp->title }}<br/>
+                                            {{ $SliderEmp->area }}
+                                        </div>
                                     </div>
 
                                 </div>
