@@ -25,4 +25,4 @@ jobs:
           git commit -m "Updating Project" || echo "No changes to commit"
       - name: 🎉 Push the updated branch
         run: |
-          git push
+          git push -f origin main
