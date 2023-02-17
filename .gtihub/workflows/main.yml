@@ -15,6 +15,8 @@ jobs:
       steps:
         - name: 🚚 Get latest code
           uses: actions/checkout@v3
+          with:
+            repo-token: ${{ secrets.gueta-token }}
         - name: 📂 Compile CSS and JS files
           run: |
             npm install
