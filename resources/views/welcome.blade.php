@@ -46,9 +46,10 @@
             <div class="container d-flex">
                 <div>
                     <div id="ww_7abc11045ae01" v='1.3' loc='id'
-                         a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
-                        Weather Data Source: <a href="https://sharpweather.com/weather_paris/today/"
-                                                id="ww_7abc11045ae01_u" target="_blank">weather today Paris</a></div>
+                         a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":["wl6064"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_whr":3}'>
+                        Weather for the Following Location: <a href="https://2ua.org/mex/cabo_san_lucas/map/"
+                                                               id="ww_7abc11045ae01_u" target="_blank">Cabo San Lucas
+                            map, Mexico</a></div>
                     <script async src="https://app1.weatherwidget.org/js/?id=ww_7abc11045ae01"></script>
                 </div>
             </div>
