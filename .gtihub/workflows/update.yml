@@ -10,15 +10,12 @@ on:
 jobs:
   build:
     web-deploy:
-      name: 🎉 Deploy
+      name: 🎉 Create deployment artifact
       runs-on: ubuntu-latest
       steps:
         - name: 🚚 Get latest code
           uses: actions/checkout@v3
-        - name: 📂 Sync files
-          uses: SamKirkland/FTP-Deploy-Action@4.3.3
-          with:
-            server: ftp.pixelesweb.com
-            username: ${{ secrets.ftp_username }}
-            password: ${{ secrets.ftp_password }}
-            server-dir: /public_html/gueta/
+        - name: 📂 Compile CSS and JS files
+          run: |
+            npm install
+            npm run build
