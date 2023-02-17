@@ -45,45 +45,19 @@
         <div class="header_weather d-none d-md-block m-0 p-0  col-md-4  order-md-3  ">
             <div class="container d-flex">
                 <div>
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/"
+                       data-label_1="NEW YORK" data-label_2="WEATHER" data-theme="original">NEW YORK WEATHER</a>
                     <script>
-                        (function (d, s, id) {
-                            if (d.getElementById(id)) {
-                                if (window.__TOMORROW__) {
-                                    window.__TOMORROW__.renderWidget();
-                                }
-                                return;
+                        !function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = 'https://weatherwidget.io/js/widget.min.js';
+                                fjs.parentNode.insertBefore(js, fjs);
                             }
-                            const fjs = d.getElementsByTagName(s)[0];
-                            const js = d.createElement(s);
-                            js.id = id;
-                            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
-
-                            fjs.parentNode.insertBefore(js, fjs);
-                        })(document, 'script', 'tomorrow-sdk');
+                        }(document, 'script', 'weatherwidget-io-js');
                     </script>
-
-                    <div class="tomorrow"
-                         data-location-id="071781"
-                         data-language="EN"
-                         data-unit-system="METRIC"
-                         data-skin="dark"
-                         data-widget-type="summary"
-                         style="padding-bottom:22px;position:relative;"
-                    >
-                        <a
-                            href="https://www.tomorrow.io/weather-api/"
-                            rel="nofollow noopener noreferrer"
-                            target="_blank"
-                            style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"
-                        >
-                            <img
-                                alt="Powered by the Tomorrow.io Weather API"
-                                src="https://weather-website-client.tomorrow.io/img/powered-by.svg"
-                                width="250"
-                                height="18"
-                            />
-                        </a>
-                    </div>
                 </div>
             </div>
 
