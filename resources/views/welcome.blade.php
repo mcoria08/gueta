@@ -45,9 +45,8 @@
         <div class="header_weather d-none d-md-block m-0 p-0  col-md-4  order-md-3  ">
             <div class="container d-flex">
                 <div>
-                    <a class="weatherwidget-io" href="https://forecast7.com/en/22d89n109d92/cabo-san-lucas/"
-                       data-label_1="LOS CABOS" data-label_2="WEATHER" data-days="3" data-theme="original">LOS CABOS
-                        WEATHER</a>
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/"
+                       data-label_1="NEW YORK" data-label_2="WEATHER" data-theme="original">NEW YORK WEATHER</a>
                     <script>
                         !function (d, s, id) {
                             var js, fjs = d.getElementsByTagName(s)[0];
@@ -60,8 +59,6 @@
                         }(document, 'script', 'weatherwidget-io-js');
                     </script>
                 </div>
-                <div>WEATHER</div>
-
             </div>
 
 
