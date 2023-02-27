@@ -10,7 +10,7 @@
                     </a>
                 </div>
 
-                <!-- Navigation Linksss, esto es una prueba sdfsdfsdf-->
+                <!-- Navigation Linksss, esto es una prueba sdfsdfsdf sdf sdf sdf-->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
