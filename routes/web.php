@@ -24,7 +24,7 @@ Route::get('/', function () {
     $currentDate = $date->format('l, jS F Y');
 
     //Get Sliders
-    $sliders = Slider::where('active', '=', 1)->where('main_section', '=', 'mainsection')->orderBy('hour', asc)->get();
+    $sliders = Slider::where('active', '=', 1)->where('main_section', '=', 'mainsection')->orderBy('hour')->get();
 
     //Get Food
     $foods = FoodSchedule::where('active', '=', 1)->get();
