@@ -45,7 +45,7 @@
             <div class="header_weather d-none d-md-block m-0 p-0  col-md-4  order-md-3  ">
                 <div class="container d-flex">
                     <div>
-                        <iframe src="https://gueta.pixelesweb.com/assets/index.html" title="description"></iframe>
+                        <iframe src="https://hg2.hourglass.com.mx/assets/index.html" title="description"></iframe>
                     </div>
                 </div>
 
