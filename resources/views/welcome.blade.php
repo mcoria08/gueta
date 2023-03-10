@@ -54,7 +54,7 @@
 
         <!-- header_logo-lg -->
         <div class="header_logo p-0 m-0 col-md-4 col-12  order-md-2">
-            <img src="/assets/images/logo.png" alt="">
+            <img src="{{ URL::asset('assets/images/logo.png') }}" alt="">
         </div>
 
     </div>
@@ -144,7 +144,7 @@
                                         <div class="type">{{ $item->schedule }}</div>
                                     </div>
                                     <div class="logo-info">
-                                        <img src="assets/images/Members.svg" alt=""/>
+                                        <img src="{{ URL::asset('assets/images/Members.svg') }}" alt=""/>
                                         <div class="type">{{ $item->type_food }}members</div>
                                     </div>
                                 </div>
@@ -302,7 +302,7 @@
                     <div class="qr-inner">
                         <div class="qr">QR</div>
                         <div class="vector_qr">
-                            <img src="/assets/images/VECTORQRBRCSL.png" alt="">
+                            <img src="{{ URL::asset('assets/images/VECTORQRBRCSL.png') }}" alt="">
                             <div class="scan_me">SCAN ME</div>
                         </div>
                     </div>
@@ -340,7 +340,7 @@
                     <div class="qr-inner0">
 
                         <div class="vector_qr0">
-                            <img src="/assets/images/VECTORQRBRCSL.png" alt="">
+                            <img src="{{ URL::asset('/assets/images/VECTORQRBRCSL.png') }}" alt="">
                             <div class="scan_me0">SCAN ME</div>
                         </div>
                     </div>
