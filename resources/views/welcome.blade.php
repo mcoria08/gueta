@@ -131,23 +131,23 @@
                                 <img src="{{ URL::asset('assets/images/' . $item->logo) }}" alt=""/>
                                 <div class="logo_info-container ">
                                     <div class="logo-info">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/buffet.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->type_food }}</div>
                                     </div>
 
                                     <div class=" logo-info">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/menu.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->carte_name }}</div>
                                     </div>
                                     <div class=" logo-info">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/clock.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->schedule }}</div>
                                     </div>
                                     <div class="logo-info">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/members.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->type_food }}members</div>
                                     </div>
@@ -175,23 +175,23 @@
                                      alt="{{ $item->restaurant_name }}"/>
                                 <div class="logo_info-container2 ">
                                     <div class="logo-info2">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/buffet.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->type_food }}</div>
                                     </div>
 
                                     <div class="logo-info2">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/menu.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->carte_name }}</div>
                                     </div>
                                     <div class=" logo-info2">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/clock.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->schedule }}</div>
                                     </div>
                                     <div class=" logo-info2">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/members.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->members }}</div>
                                     </div>
@@ -220,23 +220,23 @@
                                      alt="{{ $item->restaurant_name }}"/>
                                 <div class="logo_info-container ">
                                     <div class="logo-info">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/buffet.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->type_food }}</div>
                                     </div>
 
                                     <div class=" logo-info">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/menu.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->carte_name }}</div>
                                     </div>
                                     <div class="logo-info">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/clock.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->schedule }}</div>
                                     </div>
                                     <div class="logo-info">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/members.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->members }}</div>
                                     </div>
@@ -265,23 +265,23 @@
                                      alt="{{ $item->restaurant_name }}"/>
                                 <div class="logo_info-container2 ">
                                     <div class="logo-info2">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/buffet.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->type_food }}</div>
                                     </div>
 
                                     <div class="logo-info2">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/menu.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->carte_name }}</div>
                                     </div>
                                     <div class="logo-info2">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/clock.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->schedule }}</div>
                                     </div>
                                     <div class="logo-info2">
-                                        <img width="20px" height="20px"
+                                        <img max-width="20px" height="auto"
                                              src="{{ URL::asset('assets/images/members.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->members }}</div>
                                     </div>
