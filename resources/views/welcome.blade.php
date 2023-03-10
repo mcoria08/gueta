@@ -324,9 +324,9 @@
                                 <div class="bar_name0">{{ $item->restaurant_name }}</div>
                                 <div class="logo-time0">
                                     <div class="logo-bar0">
-                                        <img
-                                            src="{{ URL::asset('assets/images/' . $item->logo) }}"
-                                            alt="{{ $item->restaurant_name }}">
+                                        <img width="102px" height="54px"
+                                             src="{{ URL::asset('assets/images/' . $item->logo) }}"
+                                             alt="{{ $item->restaurant_name }}">
                                     </div>
                                     <div class="time-bar0">{{ $item->schedule }}</div>
                                 </div>
