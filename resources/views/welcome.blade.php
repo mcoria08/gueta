@@ -131,16 +131,16 @@
                                 <img src="{{ URL::asset('assets/images/' . $item->logo) }}" alt=""/>
                                 <div class="logo_info-container ">
                                     <div class="logo-info">
-                                        <img src="{{ URL::asset('assets/images/Buffet.svg)" alt="" />
-                                            <div class="type">{{ $item->type_food }}</div>
-                                        </div>
+                                        <img src="{{ URL::asset('assets/images/Buffet.svg') }}" alt=""/>
+                                        <div class="type">{{ $item->type_food }}</div>
+                                    </div>
 
-                                        <div class=" logo-info">
-                                        <img src="assets/images/Menu.svg" alt=""/>
+                                    <div class=" logo-info">
+                                        <img src="{{ URL::asset('assets/images/Menu.svg') }}" alt=""/>
                                         <div class="type">{{ $item->carte_name }}</div>
                                     </div>
-                                    <div class="logo-info">
-                                        <img src="assets/images/Clock.svg" alt=""/>
+                                    <div class=" logo-info">
+                                        <img src="{{ URL::asset('assets/images/Clock.svg') }}" alt=""/>
                                         <div class="type">{{ $item->schedule }}</div>
                                     </div>
                                     <div class="logo-info">
