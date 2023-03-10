@@ -290,7 +290,7 @@
                                     <div class="bar_name">{{ $item->restaurant_name }}</div>
                                     <div class="time-bar">{{ $item->schedule }}</div>
                                 </div>
-                                <img src="{{ URL::asset('assets/images/' . $item->logo) }}"
+                                <img width="102px" height="54px" src="{{ URL::asset('assets/images/' . $item->logo) }}"
                                      alt="">
                             </div>
                         @endif
