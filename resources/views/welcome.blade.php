@@ -131,20 +131,24 @@
                                 <img src="{{ URL::asset('assets/images/' . $item->logo) }}" alt=""/>
                                 <div class="logo_info-container ">
                                     <div class="logo-info">
-                                        <img src="{{ URL::asset('assets/images/Buffet.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/buffet.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->type_food }}</div>
                                     </div>
 
                                     <div class=" logo-info">
-                                        <img src="{{ URL::asset('assets/images/Menu.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/menu.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->carte_name }}</div>
                                     </div>
                                     <div class=" logo-info">
-                                        <img src="{{ URL::asset('assets/images/Clock.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/clock.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->schedule }}</div>
                                     </div>
                                     <div class="logo-info">
-                                        <img src="{{ URL::asset('assets/images/Members.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/members.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->type_food }}members</div>
                                     </div>
                                 </div>
@@ -171,20 +175,24 @@
                                      alt="{{ $item->restaurant_name }}"/>
                                 <div class="logo_info-container2 ">
                                     <div class="logo-info2">
-                                        <img src="{{ URL::asset('assets/images/Buffet.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/buffet.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->type_food }}</div>
                                     </div>
 
                                     <div class="logo-info2">
-                                        <img src="{{ URL::asset('assets/images/Menu.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/menu.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->carte_name }}</div>
                                     </div>
                                     <div class=" logo-info2">
-                                        <img src="{{ URL::asset('assets/images/Clock.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/clock.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->schedule }}</div>
                                     </div>
                                     <div class=" logo-info2">
-                                        <img src="{{ URL::asset('assets/images/Members.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/members.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->members }}</div>
                                     </div>
                                 </div>
@@ -212,20 +220,24 @@
                                      alt="{{ $item->restaurant_name }}"/>
                                 <div class="logo_info-container ">
                                     <div class="logo-info">
-                                        <img src="{{ URL::asset('assets/images/Buffet.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/buffet.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->type_food }}</div>
                                     </div>
 
                                     <div class=" logo-info">
-                                        <img src="{{ URL::asset('assets/images/Menu.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/menu.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->carte_name }}</div>
                                     </div>
                                     <div class="logo-info">
-                                        <img src="{{ URL::asset('assets/images/Clock.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/clock.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->schedule }}</div>
                                     </div>
                                     <div class="logo-info">
-                                        <img src="{{ URL::asset('assets/images/Members.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/members.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->members }}</div>
                                     </div>
                                 </div>
@@ -253,20 +265,24 @@
                                      alt="{{ $item->restaurant_name }}"/>
                                 <div class="logo_info-container2 ">
                                     <div class="logo-info2">
-                                        <img src="{{ URL::asset('assets/images/Buffet.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/buffet.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->type_food }}</div>
                                     </div>
 
                                     <div class="logo-info2">
-                                        <img src="{{ URL::asset('assets/images/Menu.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/menu.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->carte_name }}</div>
                                     </div>
                                     <div class="logo-info2">
-                                        <img src="{{ URL::asset('assets/images/Clock.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/clock.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->schedule }}</div>
                                     </div>
                                     <div class="logo-info2">
-                                        <img src="{{ URL::asset('assets/images/Members.svg') }}" alt=""/>
+                                        <img width="20px" height="20px"
+                                             src="{{ URL::asset('assets/images/members.jpeg') }}" alt=""/>
                                         <div class="type">{{ $item->members }}</div>
                                     </div>
                                 </div>
