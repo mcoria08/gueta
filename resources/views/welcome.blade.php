@@ -122,6 +122,7 @@
             <div class="footer_dinning-tittle col-12 ">DINNING RESTAURANTS</div>
             <div class="footer_dinnig-inner col-md-12">
 
+                {{dd($foods)}}
                 @foreach ($foods as $item)
                     @if ($item->section === 'dinning')
                         <div class="restaurant_container">
