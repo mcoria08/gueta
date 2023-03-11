@@ -122,11 +122,10 @@
             <div class="footer_dinning-tittle col-12 ">DINNING RESTAURANTS</div>
             <div class="footer_dinnig-inner col-md-12">
 
-                {{dd($foods)}}
                 @foreach ($foods as $item)
                     @if ($item->section === 'dinning')
                         <div class="restaurant_container">
-                            <div class="restaurant_name">{{ $item->reaturant_name }}</div>
+                            <div class="restaurant_name">{{ $item->resturant_name }}</div>
 
                             <div class="restaurants_inner col-12">
                                 <img src="{{ URL::asset('assets/images/' . $item->logo) }}" alt=""/>
