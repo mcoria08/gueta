@@ -125,7 +125,7 @@
                 @foreach ($foods as $item)
                     @if ($item->section === 'dinning')
                         <div class="restaurant_container">
-                            <div class="restaurant_name">{{ $item->resturant_name }}</div>
+                            <div class="restaurant_name">{{ $item->restaurant_name }}</div>
 
                             <div class="restaurants_inner col-12">
                                 <img src="{{ URL::asset('assets/images/' . $item->logo) }}" alt=""/>
