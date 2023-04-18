@@ -97,7 +97,7 @@ class SliderController extends Controller
             //'image.required' => 'Images file is required.',
         ]);
         $validatedData['main_section'] = $request->main_section;
-        $validatedData['active'] = true;
+        $validatedData['active'] = false;
 
         //Store data in database
         Slider::create($validatedData);
