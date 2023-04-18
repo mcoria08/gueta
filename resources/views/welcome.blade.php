@@ -71,7 +71,7 @@
                                     <div class="whole_img">
                                         <img src="{{ URL::asset('assets/images/' . $event->image) }}"
                                              alt="{{ $event->title }}" class="w-100">
-                                        <div class="top-img">{{ $event->hour }}</div>
+                                        <div class="top-img" style="right:0 !important">{{ $event->hour }}</div>
                                         <div class="bottom-img">{{ Str::upper($event->title) }}
                                             <br>{{ Str::upper($event->area) }}
                                         </div>
