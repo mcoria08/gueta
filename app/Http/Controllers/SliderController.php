@@ -16,7 +16,8 @@ class SliderController extends Controller
 
     public function getSliders()
     {
-        $sliders = Slider::orderBy('hour', 'ASC')->get();
+        //$sliders = Slider::orderBy('hour', 'ASC')->get();
+        $sliders = Slider::orderBy('hour', 'ASC')->where('active', 1)->get();
 
         return view('dashboard', ['sliders' => $sliders]);
     }
