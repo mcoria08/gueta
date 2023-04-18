@@ -89,7 +89,7 @@
                                         </a>
                                         <a href="#" type="button"
                                            data-modal-id-deactivate="{{ $Slider->id }}"
-                                           class="font-medium text-blue-600 dark:text-blue-500 hover:underline deactivateLink">Activate/Deactivate
+                                           class="font-medium text-blue-600 dark:text-blue-500 hover:underline deactivateLink">Delete
                                         </a>
                                     </td>
                                 </tr>
