@@ -109,9 +109,12 @@ class SliderController extends Controller
     public function toggleActivate(Request $request)
     {
         $nId = $request->id;
-        //$slider = Slider::find($nId);
-        //$slider->update(['active' => !$slider->active]);
-        Slider::where('id', $nId)->delete();
+        $slider = Slider::find($nId);
+        if (!$slider->active) {
+            Slider::where('id', $nId)->delete();
+        } else {
+            $slider->update(['active' => !$slider->active]);
+        }
     }
 
 
