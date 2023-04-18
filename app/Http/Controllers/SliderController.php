@@ -111,9 +111,9 @@ class SliderController extends Controller
         $nId = $request->id;
         $slider = Slider::find($nId);
         if (!$slider->active) {
-            Slider::where('id', $nId)->delete();
-        } else {
             $slider->update(['active' => !$slider->active]);
+        } else {
+            Slider::where('id', $nId)->delete();
         }
     }
 
